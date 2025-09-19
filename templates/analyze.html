@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="analysis-form">
+    <h2>Describe Your Symptoms</h2>
+    {% if error_message %}
+        <div class="error">{{ error_message }}</div>
+    {% endif %}
+    <form action="/analyze" method="POST">
+        <div class="form-group">
+            <label for="symptoms">Enter your symptoms:</label>
+            <textarea id="symptoms" name="symptoms" rows="4" placeholder="e.g., I have a headache and feel dizzy."></textarea>
+        </div>
+        <button type="submit" class="btn-analyze">
+            <i class="fas fa-notes-medical"></i> Analyze Symptoms
+        </button>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="diagnosis-form">
+    <h2>Symptom Checker</h2>
+    <form method="POST" action="/diagnose">
+        <div class="symptom-grid">
+            {% for symptom in symptoms %}
+            <label class="symptom-item">
+                <input type="checkbox" name="symptoms" value="{{ symptom }}">
+                <span class="checkmark"></span>
+                {{ symptom|replace('_', ' ')|title }}
+            </label>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn-diagnose">
+            <i class="fas fa-stethoscope"></i> Get Diagnosis
+        </button>
+    </form>
+</section>
+{% endblock %}

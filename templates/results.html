@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="results-section">
+    <h1>Analysis Results</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+    <ul>
+        {% for result in results %}
+        <li>
+            <strong>{{ result.disease }} ({{result.category}})</strong>
+            <p>{{ result.explanation }}</p>
+            <span>(Score: {{ result.score|round(2) }}, Treatment: {{ result.treatment }})</span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <a href="{{ url_for('analyze_symptoms') }}" class="back-link">Analyze More Symptoms</a>
+</section>
+{% endblock %}

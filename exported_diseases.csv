@@ -1,0 +1,299 @@
+id,name,category
+1,Eczema,INF
+2,Psoriasis,INF
+3,Contact Dermatitis,INF
+4,Fungal Infections,INF
+5,Common Cold,INF
+6,Allergic Rhinitis,INF
+7,Asthma,INF
+8,Bronchitis,INF
+9,Pneumonia,INF
+10,Sinusitis,INF
+11,Gastroenteritis,GAS
+12,Peptic Ulcers,GAS
+13,Hepatitis,GAS
+14,Irritable Bowel Syndrome (IBS),GAS
+15,Gallstones,GAS
+16,Migraine,NEU
+17,Meningitis,NEU
+18,Stroke,NEU
+19,Anxiety Disorders,MEN
+20,Epilepsy,NEU
+21,Arthritis,
+22,Osteoarthritis,
+23,Fibromyalgia,
+24,Muscle Strain,OTHER
+25,Diabetes Mellitus,END
+26,Hyperthyroidism,END
+27,Hypothyroidism,END
+28,Systemic Lupus Erythematosus,AI
+29,Chronic Fatigue Syndrome,
+30,Anemia,OTHER
+31,Hemophilia,OTHER
+32,Leukemia,
+33,Lymphoma,
+34,Heart Disease,CAR
+35,Hypertension,CAR
+36,Myocardial Infarction,CAR
+37,Tuberculosis,INF
+38,Influenza (Flu),INF
+39,COVID-19,INF
+40,Rheumatoid Arthritis,AI
+41,Chronic Obstructive Pulmonary Disease (COPD),
+42,Celiac Disease,GAS
+43,Multiple Sclerosis,NEU
+44,Parkinson's Disease,NEU
+45,Systemic Scleroderma,AI
+46,Addison's Disease,END
+47,Cushing's Syndrome,END
+48,Pancreatitis,GAS
+49,Gout,OTHER
+50,Hypoglycemia,END
+51,Hyperglycemia,END
+52,Sleep Apnea,
+53,HIV/AIDS,INF
+54,Lyme Disease,OTHER
+55,Zika Virus,INF
+56,Dengue Fever,INF
+57,Chikungunya,INF
+58,Malaria,INF
+59,Typhoid Fever,INF
+60,Mumps,INF
+61,Rubella (German Measles),INF
+62,Measles,INF
+63,Chickenpox,INF
+64,Acute Sinusitis,INF
+65,Chronic Sinusitis,INF
+66,Conjunctivitis (Pink Eye),INF
+67,Otitis Media (Middle Ear Infection),INF
+68,Vertigo,
+69,Hypoglycemia (Low Blood Sugar),
+70,Hyperglycemia (High Blood Sugar),
+71,Gastroesophageal Reflux Disease (GERD),GAS
+72,Peptic Ulcer Disease,GAS
+73,Urinary Tract Infection (UTI),INF
+74,Bacterial Vaginosis,OTHER
+75,Candida Infections (Thrush),OTHER
+76,Chlamydia,INF
+77,Gonorrhea,INF
+78,Syphilis,INF
+79,Trichomoniasis,INF
+80,Herpes Simplex Virus (HSV),INF
+81,Human Papillomavirus (HPV),INF
+82,Human Immunodeficiency Virus (HIV),
+83,Endometriosis,GAS
+84,Polycystic Ovary Syndrome (PCOS),END
+85,Interstitial Cystitis (Painful Bladder Syndrome),AI
+86,Irritable Bowel Syndrome (IBS),
+87,Celiac Disease,
+88,Crohn's Disease,GAS
+89,Ulcerative Colitis,GAS
+90,Diverticulitis,GAS
+91,Panic Disorder,MEN
+92,Obsessive-Compulsive Disorder (OCD),MEN
+93,Bipolar Disorder,MEN
+94,Schizophrenia,MEN
+95,Post-Traumatic Stress Disorder (PTSD),MEN
+96,Major Depressive Disorder,MEN
+97,Anorexia Nervosa,MEN
+98,Bulimia Nervosa,MEN
+99,Generalized Anxiety Disorder (GAD),
+100,Social Anxiety Disorder,MEN
+101,Seasonal Affective Disorder (SAD),MEN
+102,Borderline Personality Disorder (BPD),MEN
+103,Chronic Fatigue Syndrome (CFS),OTHER
+104,Raynaud's Phenomenon,
+105,Sjogren's Syndrome,AI
+106,Systemic Lupus Erythematosus (SLE),
+107,Rheumatic Fever,AI
+108,Psoriatic Arthritis,AI
+109,Scleroderma,AI
+110,Hypersensitivity Pneumonitis,AI
+111,Sarcoidosis,AI
+112,Amyotrophic Lateral Sclerosis (ALS),NEU
+113,Huntington's Disease,NEU
+114,Motor Neurone Disease (MND),NEU
+115,Myasthenia Gravis,OTHER
+116,Ehlers-Danlos Syndrome (EDS),SKIN
+117,Marfan Syndrome,OTHER
+118,Turner Syndrome,OTHER
+119,Klinefelter Syndrome,OTHER
+120,Cystic Fibrosis,OTHER
+121,Alport Syndrome,OTHER
+122,Fabry Disease,OTHER
+123,Hemochromatosis,OTHER
+124,Wilson's Disease,OTHER
+125,Phenylketonuria (PKU),OTHER
+126,Hyperparathyroidism,OTHER
+127,Hypoparathyroidism,OTHER
+128,Addison's Disease,
+129,Cushing's Syndrome,
+130,Graves' Disease,END
+131,Hashimoto's Thyroiditis,END
+132,Pheochromocytoma,END
+133,Sarcoidosis,
+134,Wegener's Granulomatosis (Granulomatosis with Polyangiitis),
+135,Giant Cell Arteritis,AI
+136,Takayasu's Arteritis,AI
+137,Lupus Nephritis,AI
+138,Vasculitis,AI
+139,Behcet's Disease,AI
+140,Hepatitis A,INF
+141,Hepatitis B,INF
+142,Hepatitis C,INF
+143,Autoimmune Hepatitis,AI
+144,Primary Biliary Cholangitis (PBC),AI
+145,Hemolytic Anemia,OTHER
+146,Myelodysplastic Syndromes (MDS),OTHER
+147,Aplastic Anemia,OTHER
+148,Duchenne Muscular Dystrophy (DMD),OTHER
+149,Becker Muscular Dystrophy (BMD),OTHER
+150,Charcot-Marie-Tooth Disease (CMT),OTHER
+151,Friedreich's Ataxia,OTHER
+152,Spinal Muscular Atrophy (SMA),OTHER
+153,Guillain-Barré Syndrome (GBS),NEU
+154,Peripheral Neuropathy,NEU
+155,Amyloidosis,AI
+156,Hemolytic Uremic Syndrome (HUS),
+157,Thalassemia,OTHER
+158,Sickle Cell Disease,CAR
+159,Gaucher Disease,OTHER
+160,Pompe Disease,OTHER
+161,Hunter Syndrome (Mucopolysaccharidosis Type II),OTHER
+162,Hurler Syndrome (Mucopolysaccharidosis Type I),OTHER
+163,Tay-Sachs Disease,NEU
+164,Canavan Disease,OTHER
+165,Lesch-Nyhan Syndrome,OTHER
+166,Krabbe Disease,
+167,Metachromatic Leukodystrophy,NEU
+168,Adrenoleukodystrophy (ALD),
+169,Alexander Disease,NEU
+170,Rett Syndrome,NEU
+171,Angelman Syndrome,
+172,Prader-Willi Syndrome,OTHER
+173,Noonan Syndrome,
+174,Williams Syndrome,
+175,Huntington's Disease,
+176,Treacher Collins Syndrome,
+177,Cri du Chat Syndrome,
+178,Niemann-Pick Disease,OTHER
+179,Tay-Sachs Disease,
+180,Canavan Disease,
+181,Maple Syrup Urine Disease,
+182,Zellweger Syndrome,
+183,Cockayne Syndrome,
+184,Progeria,
+185,Bloom Syndrome,
+186,Werner Syndrome,
+187,Fanconi Anemia,
+188,Lesch-Nyhan Syndrome,
+189,Alkaptonuria,OTHER
+190,Porphyria,SKIN
+191,Fabry Disease,
+192,Gaucher Disease,
+193,Hurler Syndrome,
+194,Hunter Syndrome,
+195,Krabbe Disease,
+196,Metachromatic Leukodystrophy,
+197,Adrenoleukodystrophy (ALD),
+198,Alexander Disease,
+199,Rett Syndrome,
+200,Angelman Syndrome,
+201,Prader-Willi Syndrome,
+202,Noonan Syndrome,
+203,Williams Syndrome,
+204,Huntington's Disease,
+205,Tuberous Sclerosis Complex (TSC),
+206,von Hippel-Lindau Disease,
+207,Neurofibromatosis Type 1 (NF1),
+208,Neurofibromatosis Type 2 (NF2),
+209,Schwannomatosis,OTHER
+210,Sturge-Weber Syndrome,OTHER
+211,Wiskott-Aldrich Syndrome,
+212,Xeroderma Pigmentosum,SKIN
+213,Sjogren-Larsson Syndrome,
+214,Rothmund-Thomson Syndrome,SKIN
+215,Thalassemia,
+216,Hypophosphatemia,END
+217,Hyperphosphatemia,END
+218,Hypomagnesemia,END
+219,Hypermagnesemia,END
+220,Hypocalcemia,END
+221,Hypercalcemia,END
+222,Hypokalemia,END
+223,Hyperkalemia,END
+224,Hypochloremia,END
+225,Hyperchloremia,END
+226,Glycogen Storage Disease,
+227,Phenylketonuria (PKU),
+228,Albinism,OTHER
+229,Color Blindness,OTHER
+230,Hemophilia,
+231,Leukodystrophy,
+232,Alzheimer's Disease,NEU
+233,Parkinson's Disease,
+234,Multiple System Atrophy (MSA),NEU
+235,Progressive Supranuclear Palsy (PSP),NEU
+236,Creutzfeldt-Jakob Disease,NEU
+237,Acanthosis Nigricans,SKIN
+238,Acromegaly,
+239,Addisonian Crisis,
+240,Adult Still's Disease,AI
+241,Agnosia,NEU
+242,Alopecia Areata,SKIN
+243,Aortic Aneurysm,CAR
+244,Appendicitis,OTHER
+245,Aphasia,NEU
+246,Aplastic Anemia,
+247,Arrhythmias,OTHER
+248,Arteriosclerosis,CAR
+249,Asperger's Syndrome,MEN
+250,Asphyxia,
+251,Barrett's Esophagus,
+252,Biliary Atresia,GAS
+253,Brugada Syndrome,CAR
+254,Carcinoid Syndrome,CAR
+255,Carpal Tunnel Syndrome,OTHER
+256,Celiac Disease,
+257,Cervical Spondylosis,OTHER
+258,Chondrocalcinosis (Pseudogout),
+259,Chronic Fatigue Syndrome (CFS),
+260,Chronic Obstructive Pulmonary Disease (COPD),
+261,Cirrhosis,
+262,Cluster Headache,
+263,Congenital Adrenal Hyperplasia,END
+264,Costochondritis,
+265,Creutzfeldt-Jakob Disease (CJD),
+266,Cushing's Syndrome,
+267,Cystic Fibrosis (CF),OTHER
+268,Deep Vein Thrombosis (DVT),OTHER
+269,Degenerative Disc Disease,OTHER
+270,Diabetes Insipidus,END
+271,Diabetic Ketoacidosis (DKA),
+272,Diverticulitis,
+273,Dysautonomia,NEU
+274,Ehlers-Danlos Syndrome (EDS),
+275,Epilepsy,
+276,Esophageal Varices,GAS
+277,Fibromyalgia,
+278,Frozen Shoulder,OTHER
+279,Gastroparesis,GAS
+280,Glaucoma,OTHER
+281,Graves' Disease,
+282,Guillain-Barre Syndrome,OTHER
+283,Gum Disease (Periodontitis),OTHER
+284,Hemochromatosis,
+285,"Hepatitis (A, B, C)",
+286,Hereditary Angioedema,OTHER
+287,Hidradenitis Suppurativa,SKIN
+288,Hirschsprung's Disease,OTHER
+289,Hyperemesis Gravidarum,OTHER
+290,Idiopathic Pulmonary Fibrosis,OTHER
+291,Interstitial Cystitis (Painful Bladder Syndrome),
+292,Irritable Bowel Syndrome (IBS),
+293,Kawasaki Disease,OTHER
+294,Klinefelter Syndrome,
+295,Meniere's Disease,NEU
+296,Mesenteric Ischemia,OTHER
+297,Myasthenia Gravis,
+298,Myelodysplastic Syndromes (MDS),
