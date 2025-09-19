@@ -4,8 +4,19 @@ import joblib
 import pandas as pd
 import os
 import logging
-from Prolog.prolog_engine import prolog_diagnose
-from ml_model.text_analyzer import extract_symptoms
+
+# Import your modules (comment out if they don't exist to test basic functionality)
+try:
+    from Prolog.prolog_engine import prolog_diagnose
+except ImportError:
+    print("Warning: Prolog module not found")
+    def prolog_diagnose(*args): return []
+
+try:
+    from ml_model.text_analyzer import extract_symptoms
+except ImportError:
+    print("Warning: Text analyzer not found")
+    def extract_symptoms(text): return text.split(',') if text else []
 
 app = Flask(__name__)
 
@@ -101,8 +112,8 @@ def validate_symptoms(symptoms):
     validated_symptom_ids = []
     unrecognized_symptoms = []
     for symptom in symptoms:
-        if symptom.lower() in VALID_SYMPTOMS:
-            validated_symptom_ids.append(VALID_SYMPTOMS[symptom.lower()])
+        if symptom.lower().strip() in VALID_SYMPTOMS:
+            validated_symptom_ids.append(VALID_SYMPTOMS[symptom.lower().strip()])
         else:
             unrecognized_symptoms.append(symptom)
 
@@ -110,40 +121,67 @@ def validate_symptoms(symptoms):
         logger.warning(f"Unrecognized symptoms found: {unrecognized_symptoms}")
     return validated_symptom_ids, unrecognized_symptoms
 
-@app.route('/')
+# MAIN ROUTES - These are crucial for your website to work
+
+@app.route('/', methods=['GET', 'POST'])
 def home():
     """
-    Home route: Redirects to the analysis page.
+    Main route - shows symptom input form and processes results
     """
-    return redirect(url_for('analyze_symptoms'))
-
-@app.route('/analyze', methods=['GET', 'POST'])
-def analyze_symptoms():
-    """
-    Route for text-based symptom entry and analysis.
-    """
-    if request.method == 'POST':
-        user_input = request.form['symptoms']
-        logger.info("User input: %s", user_input)
-
+    if request.method == 'GET':
+        # Show the symptom input form
+        return render_template('analyze.html', error_message=None)
+    
+    elif request.method == 'POST':
+        # Process the form submission
         try:
+            user_input = request.form.get('symptoms', '').strip()
+            logger.info("User input: %s", user_input)
+
+            if not user_input:
+                return render_template('analyze.html', error_message="Please enter your symptoms.")
+
+            # Extract symptoms from user input
             extracted_symptoms = extract_symptoms(user_input) if user_input else []
             logger.info("Extracted symptoms: %s", extracted_symptoms)
+
+            # If no symptoms extracted, treat input as comma-separated list
+            if not extracted_symptoms:
+                extracted_symptoms = [s.strip() for s in user_input.split(',') if s.strip()]
+
+            if not extracted_symptoms:
+                return render_template('analyze.html', error_message="No symptoms could be identified. Please try again.")
 
             validated_symptom_ids, unrecognized_symptoms = validate_symptoms(extracted_symptoms)
 
             if not validated_symptom_ids:
-                return render_template('analyze.html', error_message="No valid symptoms recognized. Please try again.")
+                error_msg = "No valid symptoms recognized. Please try again."
+                if unrecognized_symptoms:
+                    error_msg += f" Unrecognized: {', '.join(unrecognized_symptoms)}"
+                return render_template('analyze.html', error_message=error_msg)
 
             # Perform diagnosis based on validated symptom IDs
             results = diagnose_from_symptom_ids(validated_symptom_ids)
 
-            return render_template('results.html', results=results)
+            return render_template('results.html', results=results, symptoms=extracted_symptoms)
+
         except Exception as e:
             logger.error(f"Error during symptom analysis: {e}", exc_info=True)
             return render_template('analyze.html', error_message="An error occurred during analysis. Please try again.")
 
-    return render_template('analyze.html', error_message=None)
+@app.route('/analyze', methods=['GET', 'POST'])  
+def analyze():
+    """
+    Alternative route - redirects to main route for consistency
+    """
+    return home()
+
+@app.route('/test')
+def test():
+    """
+    Test route to verify the app is working
+    """
+    return "<h1>Flask App is Working!</h1><p>Your medical diagnosis system is running properly.</p><a href='/'>Go to Main App</a>"
 
 def diagnose_from_symptom_ids(symptom_ids):
     """
@@ -166,12 +204,12 @@ def diagnose_from_symptom_ids(symptom_ids):
                 logger.info("Disease symptoms mapping loaded successfully from the database.")
             except sqlite3.Error as e:
                 logger.error(f"Error loading disease-symptom mapping: {e}", exc_info=True)
-                return []
+                return [{"disease": "Database Error", "explanation": "Could not load disease data", "score": 0, "treatment": "Consult a doctor", "category": "Error"}]
             finally:
                 conn.close()
         else:
             logger.error("No database connection.")
-            return []
+            return [{"disease": "Connection Error", "explanation": "Could not connect to database", "score": 0, "treatment": "Consult a doctor", "category": "Error"}]
 
         # Find potential diseases
         potential_diseases = {}
@@ -179,6 +217,16 @@ def diagnose_from_symptom_ids(symptom_ids):
             match_count = len(set(symptom_ids).intersection(symptoms))
             if match_count > 0:
                 potential_diseases[disease_id] = match_count
+
+        # If no matches found, return a helpful message
+        if not potential_diseases:
+            return [{
+                "disease": "No Specific Match Found", 
+                "explanation": "The symptoms provided don't match any specific disease pattern in our database. This could be normal or require professional evaluation.",
+                "score": 0,
+                "treatment": "Please consult a healthcare professional for proper diagnosis",
+                "category": "General"
+            }]
 
         # Sort diseases by match count
         sorted_diseases = sorted(potential_diseases.items(), key=lambda item: item[1], reverse=True)
@@ -190,13 +238,12 @@ def diagnose_from_symptom_ids(symptom_ids):
             disease_category = DISEASE_CATEGORIES.get(disease_id, "Unknown Category")
 
             matched_symptoms = []
-
             conn = get_db_connection()
             if conn:
                 try:
                     cursor = conn.cursor()
                     for symptom_id in symptom_ids:
-                        if symptom_id in DISEASE_SYMPTOMS[disease_id]:
+                        if symptom_id in DISEASE_SYMPTOMS.get(disease_id, []):
                             cursor.execute('SELECT description FROM symptoms WHERE id = ?', (symptom_id,))
                             symptom_name = cursor.fetchone()
                             if symptom_name:
@@ -210,118 +257,22 @@ def diagnose_from_symptom_ids(symptom_ids):
             results.append({
                 'disease': disease_name,
                 'explanation': explanation,
-                'score': match_count * 10,  # Arbitrary scoring
-                'treatment': 'Consult doctor',  # Placeholder
+                'score': match_count * 20,  # Score out of 100
+                'treatment': 'Consult a doctor for proper diagnosis and treatment',
                 'category': disease_category
             })
 
         return results
+        
     except Exception as e:
         logger.error(f"Error in diagnosis: {e}", exc_info=True)
-        return []
-
-def get_db_diagnosis(symptoms):
-    """
-    Fetches potential diagnoses from the database based on symptom matches.
-    """
-    conn = get_db_connection()
-    if not conn:
-        return []
-
-    try:
-        placeholders = ','.join(['?'] * len(symptoms))
-        query = f"""
-        SELECT d.name, d.treatment, COUNT(*) as match_count 
-        FROM diseases d
-        JOIN disease_symptoms ds ON d.id = ds.disease_id
-        JOIN symptoms s ON ds.symptom_id = s.id
-        WHERE s.description IN ({placeholders})
-        GROUP BY d.id
-        ORDER BY match_count DESC
-        LIMIT 5
-        """
-
-        results = conn.execute(query, symptoms).fetchall()
-        db_results = [{'disease': r[0], 'treatment': r[1], 'score': r[2] * 2} for r in results]
-        logger.info("Database diagnosis results: %s", db_results)
-        return db_results
-    except Exception as e:
-        logger.error("Database query error: %s", e, exc_info=True)
-        return []
-    finally:
-        conn.close()
-
-def get_ml_diagnosis(symptoms):
-    """
-    Get diagnosis probabilities from the machine learning model.
-    """
-    if not ml_model:
-        logger.warning("ML model not loaded; skipping ML diagnosis.")
-        return []
-
-    try:
-        symptom_df = pd.DataFrame({feat: [0] for feat in ml_model.feature_names_in_})
-        for symptom in symptoms:
-            if symptom in symptom_df.columns:
-                symptom_df[symptom] = 1
-
-        # Handle missing columns (symptoms not in ML model)
-        for col in symptom_df.columns:
-            if col not in symptoms:
-                symptom_df[col] = 0  # Set to 0 if symptom is not present
-
-        probabilities = ml_model.predict_proba(symptom_df)[0]
-        ml_results = list(zip(ml_model.classes_, probabilities))
-        logger.info("ML diagnosis results: %s", ml_results)
-        return [{'disease': d, 'score': p * 100, 'treatment': 'Consult doctor'} for d, p in ml_results]
-    except Exception as e:
-        logger.error("ML prediction error: %s", e, exc_info=True)
-        return []
-
-def combine_results(results):
-    """
-    Combines diagnosis results from database, ML, and Prolog into a unified list.
-    """
-    combined = {}
-
-    for item in results.get('db', []):
-        disease = item['disease']
-        combined[disease] = {
-            'score': item['score'],
-            'treatment': item['treatment'],
-            'sources': ['database']
-        }
-
-    for item in results.get('ml', []):
-        disease = item['disease']
-        score = item['score']
-        if disease in combined:
-            combined[disease]['score'] += score
-            combined[disease]['sources'].append('ml')
-        else:
-            combined[disease] = {
-                'score': score,
-                'treatment': item['treatment'],
-                'sources': ['ml']
-            }
-
-    for item in results.get('Prolog', []):
-        disease = item.get('disease')
-        treatment = item.get('treatment', 'Consult doctor')
-        if disease in combined:
-            combined[disease]['score'] += 30
-            combined[disease]['sources'].append('Prolog')
-        else:
-            combined[disease] = {
-                'score': 30,
-                'treatment': treatment,
-                'sources': ['Prolog']
-            }
-
-    sorted_results = sorted(combined.items(), key=lambda x: x[1]['score'], reverse=True)[:5]
-    logger.info("Final combined diagnosis results: %s", sorted_results)
-
-    return [{'disease': k, 'score': v['score'], 'treatment': v['treatment'], 'sources': v['sources']} for k, v in sorted_results]
+        return [{
+            "disease": "System Error", 
+            "explanation": f"An error occurred during diagnosis: {str(e)}", 
+            "score": 0,
+            "treatment": "Please try again or consult a healthcare professional",
+            "category": "Error"
+        }]
 
 # Health check endpoint for deployment platforms
 @app.route('/health')
@@ -332,20 +283,45 @@ def health_check():
 # Error handlers
 @app.errorhandler(404)
 def not_found(error):
-    return render_template('404.html'), 404 if os.path.exists('templates/404.html') else "Page not found", 404
+    logger.error(f"404 error: {error}")
+    return f"<h1>Page Not Found</h1><p>The page you're looking for doesn't exist.</p><a href='/'>Go to Home</a>", 404
 
 @app.errorhandler(500)
 def internal_error(error):
     logger.error(f"Internal server error: {error}")
-    return "Internal server error", 500
+    return f"<h1>Internal Server Error</h1><p>Something went wrong.</p><a href='/test'>Test App</a>", 500
+
+# Basic template fallback if templates don't exist
+@app.route('/basic')
+def basic_interface():
+    """Basic HTML interface if templates are missing"""
+    return '''
+    <!DOCTYPE html>
+    <html>
+    <head><title>Medical Diagnosis System</title></head>
+    <body>
+        <h1>Medical Diagnosis System</h1>
+        <form method="POST" action="/">
+            <p>Enter your symptoms (separated by commas):</p>
+            <textarea name="symptoms" rows="4" cols="50" placeholder="e.g., headache, fever, nausea"></textarea><br><br>
+            <input type="submit" value="Analyze Symptoms">
+        </form>
+        <p><a href="/test">Test if app is working</a></p>
+    </body>
+    </html>
+    '''
 
 if __name__ == '__main__':
     # Configuration for different environments
     port = int(os.environ.get('PORT', 5000))
-    host = os.environ.get('HOST', '127.0.0.1')
-    debug = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
+    host = os.environ.get('HOST', '0.0.0.0')  # Changed to 0.0.0.0 for external access
+    debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'  # Default to False for production
     
     logger.info(f"Starting Flask app on {host}:{port} (debug={debug})")
+    print(f"🚀 Medical Diagnosis System starting on http://{host}:{port}")
+    print(f"📊 Database status: {'Connected' if get_db_connection() else 'Error'}")
+    print(f"🤖 ML Model status: {'Loaded' if ml_model else 'Not loaded'}")
+    
     app.run(host=host, port=port, debug=debug)
 else:
     # This runs when the app is imported (e.g., by gunicorn)
