@@ -1,0 +1,812 @@
+id,description
+1,Itching
+2,skin rash
+3,nodal skin eruptions
+4,dischromic patches
+5,skin peeling
+6,scurring
+7,"Red, scaly skin"
+8,silver like dusting
+9,small dents in nails
+10,inflammatory nails
+11,blister
+12,red sore around nose
+13,yellow crust ooze
+14,blisters
+15,Continuous sneezing
+16,shivering
+17,chills
+18,watering from eyes
+19,cough
+20,runny nose
+21,congestion
+22,sinus pressure
+23,loss of smell
+24,Shortness of breath
+25,chest pain
+26,wheezing
+27,fast heart rate
+28,mucoid sputum
+29,throat irritation
+30,breathlessness
+31,high fever
+32,rusty sputum
+33,headache
+34,Stomach pain
+35,vomiting
+36,diarrhoea
+37,nausea
+38,loss of appetite
+39,abdominal pain
+40,dehydration
+41,indigestion
+42,internal itching
+43,Yellowing of eyes
+44,yellowish skin
+45,dark urine
+46,joint pain
+47,inflammation and redness
+48,shortness of breath
+49,blueness of lips or fingernail beds
+50,dizziness
+51,blurred vision
+52,excessive thirst
+53,Stiff neck
+54,altered sensorium
+55,sensitivity to light
+56,Sudden numbness or weakness
+57,confusion
+58,trouble speaking
+59,loss of balance
+60,weakness of one body side
+61,Palpitations
+62,restlessness
+63,sweating
+64,irritability
+65,muscle tension
+66,Seizures
+67,loss of awareness
+68,staring spells
+69,temporary confusion
+70,unusual sensations or behaviors
+71,Joint pain
+72,swelling
+73,stiffness
+74,muscle weakness
+75,painful walking
+76,movement stiffness
+77,reduced flexibility
+78,bone spurs
+79,Widespread musculoskeletal pain
+80,fatigue
+81,Muscle pain
+82,weakness
+83,limited range of motion
+84,muscle spasms
+85,Excessive hunger
+86,increased appetite
+87,polyuria
+88,weight loss
+89,dry mouth
+90,excessive hunger
+91,hoarseness
+92,bristly nails
+93,Weight gain
+94,cold intolerance
+95,dry skin
+96,puffy face
+97,fever
+98,swollen lymph nodes
+99,malaise
+100,Severe fatigue not improved by rest
+101,unrefreshing sleep
+102,muscle pain
+103,headaches
+104,sore throat
+105,difficulty concentrating
+106,pale skin
+107,irregular heartbeats
+108,Excessive bleeding
+109,easy bruising
+110,blood in urine
+111,Fever
+112,frequent infections
+113,easy bleeding
+114,Swollen lymph nodes
+115,night sweats
+116,itching
+117,Chest pain
+118,palpitations
+119,swollen extremities
+120,Often asymptomatic
+121,nosebleeds
+122,lightheadedness
+123,pain in arms or back
+124,Chronic cough
+125,blood in sputum
+126,internal discomfort
+127,Cough
+128,frequent respiratory infections
+129,Diarrhea
+130,bloating
+131,gas
+132,constipation
+133,skin rash (butterfly-shaped)
+134,Tremors
+135,slowed movement
+136,muscle stiffness
+137,impaired balance
+138,changes in speech
+139,Hardened or tightened patches of skin
+140,swollen fingers and hands
+141,Raynaud's phenomenon
+142,acid reflux
+143,difficulty swallowing
+144,Extreme fatigue
+145,decreased appetite
+146,darkening of skin
+147,low blood pressure
+148,salt craving
+149,low blood sugar
+150,diarrhea
+151,muscle or joint pains
+152,pink or purple stretch marks
+153,thinning skin
+154,acne
+155,high blood pressure
+156,bone loss
+157,diabetes
+158,Upper abdominal pain
+159,abdominal pain that radiates to the back
+160,tenderness when touching the abdomen
+161,rapid pulse
+162,Intense joint pain
+163,lingering discomfort
+164,Shakiness
+165,hunger
+166,Frequent urination
+167,increased thirst
+168,fruity-smelling breath
+169,Loud snoring
+170,episodes of breathing cessation during sleep
+171,abrupt awakenings with gasping or choking
+172,morning headache
+173,difficulty staying asleep
+174,excessive daytime sleepiness
+175,muscle aches
+176,mouth ulcers
+177,skin rash (erythema migrans)
+178,loss of taste or smell
+179,difficulty breathing
+180,High fever
+181,nasal congestion
+182,rash
+183,stomach pain
+184,alternating constipation or diarrhea
+185,rose-colored spots on the body
+186,Swollen salivary glands
+187,tiredness
+188,Mild fever
+189,stuffy or runny nose
+190,inflamed red eyes
+191,enlarged tender lymph nodes
+192,fine pink rash
+193,aching joints
+194,dry cough
+195,inflamed eyes
+196,tiny white spots inside the mouth
+197,tiredness and malaise
+198,"skin rash with itchy, fluid-filled blisters"
+199,Nasal congestion
+200,thick yellow or green discharge from the nose
+201,facial pain and pressure
+202,toothache
+203,Facial pain and pressure
+204,nasal obstruction
+205,thick discolored discharge
+206,reduced sense of smell and taste
+207,Redness in one or both eyes
+208,a gritty feeling
+209,discharge that forms a crust during the night
+210,tearing
+211,Ear pain
+212,fluid drainage from the ear
+213,hearing loss
+214,irritability in children
+215,difficulty sleeping
+216,Spinning sensation
+217,balance problems
+218,Heartburn
+219,regurgitation of food or sour liquid
+220,laryngitis
+221,new or worsening asthma
+222,Burning stomach pain
+223,heartburn
+224,intolerance to fatty foods
+225,"Strong, persistent urge to urinate"
+226,burning sensation when urinating
+227,"passing frequent, small amounts of urine"
+228,cloudy urine
+229,strong-smelling urine
+230,pelvic pain
+231,"Thin, gray, white or green vaginal discharge"
+232,"foul-smelling ""fishy"" vaginal odor"
+233,vaginal itching
+234,White patches on the tongue and inside of the mouth
+235,redness or soreness
+236,cracking and redness at the corners of the mouth
+237,Painful urination
+238,lower abdominal pain
+239,vaginal discharge in women
+240,discharge from the penis in men
+241,painful sexual intercourse
+242,bleeding between periods
+243,Abnormal discharge from the penis or vagina
+244,pain or swelling in one testicle
+245,increased vaginal bleeding
+246,"Painless sores on the genitals, rectum or mouth"
+247,"Frothy, greenish-yellow vaginal discharge"
+248,strong vaginal odor
+249,vaginal itching or irritation
+250,discomfort during intercourse
+251,Painful blisters or ulcers at the site of infection
+252,burning sensation
+253,flu-like symptoms
+254,Genital warts
+255,common warts
+256,plantar warts
+257,flat warts
+258,cervical dysplasia
+259,Painful periods (dysmenorrhea)
+260,pain during intercourse
+261,pain with bowel movements or urination
+262,excessive bleeding
+263,infertility
+264,Irregular periods
+265,excess androgen
+266,polycystic ovaries
+267,weight gain
+268,thinning hair
+269,fertility issues
+270,Chronic pelvic pain
+271,a persistent urgent need to urinate
+272,frequent urination
+273,Abdominal pain
+274,cramping
+275,mucus in stool
+276,Diarrhea with blood or pus
+277,abdominal pain and cramping
+278,rectal pain
+279,rectal bleeding
+280,urgency to defecate
+281,inability to defecate despite urgency
+282,Persistent pain in the lower left side of the abdomen
+283,abdominal tenderness
+284,Recurrent panic attacks
+285,sudden intense fear
+286,trembling
+287,fear of losing control
+288,"Recurrent, unwanted thoughts (obsessions)"
+289,repetitive behaviors (compulsions)
+290,anxiety
+291,distress
+292,ritualistic behaviors
+293,Extreme mood swings
+294,manic episodes
+295,depressive episodes
+296,Hallucinations
+297,delusions
+298,disorganized thinking
+299,abnormal motor behavior
+300,negative symptoms
+301,Flashbacks
+302,nightmares
+303,severe anxiety
+304,uncontrollable thoughts about the traumatic event
+305,emotional numbness
+306,Persistent sadness
+307,loss of interest in activities
+308,changes in appetite
+309,changes in sleep patterns
+310,feelings of worthlessness
+311,Extreme weight loss
+312,restricted eating
+313,intense fear of gaining weight
+314,distorted body image
+315,excessive exercise
+316,Episodes of binge eating
+317,purging
+318,fear of gaining weight
+319,Excessive worry about various aspects of life
+320,sleep disturbances
+321,Intense fear of social situations
+322,avoidance of social interactions
+323,fear of being judged
+324,excessive self-consciousness
+325,"physical symptoms (blushing, sweating)"
+326,Depression that occurs at the same time each year
+327,typically in winter
+328,low energy
+329,hypersomnia
+330,overeating
+331,social withdrawal
+332,Intense fear of abandonment
+333,unstable relationships
+334,impulsive behavior
+335,mood swings
+336,feelings of emptiness
+337,self-harm
+338,difficulty controlling anger
+339,sleep problems
+340,difficulty with concentration and memory
+341,muscle and joint pain
+342,"color changes in the skin in response to cold or stress (white, blue, then red)"
+343,Dry eyes
+344,persistent dry cough
+345,skin rashes
+346,vaginal dryness
+347,photosensitivity
+348,painful and tender joints
+349,"red, hot or swollen joints"
+350,"small, painless nodules beneath the skin"
+351,heart murmur
+352,flat or slightly raised painless rash with a ragged edge
+353,Tightening and hardening of the skin
+354,skin lesions
+355,Fatigue
+356,Progressive muscle weakness
+357,twitching
+358,difficulty speaking and swallowing
+359,paralysis
+360,Involuntary jerking movements
+361,muscle problems
+362,difficulty with speech and swallowing
+363,cognitive decline
+364,depression
+365,slurred speech
+366,muscle cramps and twitches
+367,Muscle weakness
+368,drooping of one or both eyelids
+369,double vision
+370,altered speech
+371,facial muscle weakness
+372,Hypermobile joints
+373,stretchy skin
+374,fragile skin that bruises easily
+375,chronic pain
+376,scoliosis
+377,early-onset arthritis
+378,Tall and slender build
+379,"disproportionately long arms, legs, fingers, and toes"
+380,heart murmurs
+381,extreme nearsightedness
+382,Short stature
+383,webbed neck
+384,low-set ears
+385,low hairline at the back of the neck
+386,swelling of hands and feet
+387,cardiac defects
+388,Low testosterone
+389,reduced muscle mass
+390,reduced facial and body hair
+391,enlarged breast tissue
+392,tall stature
+393,learning disabilities
+394,delayed speech and language development
+395,Persistent cough with thick mucus
+396,repeated lung infections
+397,sinusitis
+398,poor growth
+399,weight gain despite good appetite
+400,"frequent greasy, bulky stools"
+401,Progressive loss of kidney function
+402,eye abnormalities
+403,"Pain, particularly in the hands and feet"
+404,"clusters of small, dark red spots on the skin"
+405,decreased sweating
+406,corneal opacity
+407,kidney damage
+408,heart problems
+409,loss of sex drive
+410,impotence
+411,heart failure
+412,liver failure
+413,bronze or gray skin color
+414,lack of appetite
+415,jaundice
+416,golden-brown eye discoloration (Kayser-Fleischer rings)
+417,fluid buildup in legs and abdomen
+418,uncontrolled movements
+419,speech problems
+420,Intellectual disability
+421,delayed development
+422,behavioral problems
+423,psychiatric disorders
+424,musty odor
+425,Fragile bones
+426,kidney stones
+427,excessive urination
+428,tiring easily or weakness
+429,depression or forgetfulness
+430,bone and joint pain
+431,"Tingling in fingertips, toes, and lips"
+432,muscle aches or cramps
+433,"twitching or spasms of muscles, particularly around the mouth, hands, arms, and throat"
+434,painful menstrual periods
+435,patchy hair loss
+436,Anxiety and irritability
+437,tremor of hands or fingers
+438,heat sensitivity
+439,enlarged thyroid (goiter)
+440,bulging eyes
+441,"thick, red skin on the shins or tops of the feet"
+442,joint pain and stiffness
+443,High blood pressure
+444,rapid heartbeat
+445,tremors
+446,panic attack-type symptoms
+447,Sinus pain and drainage
+448,nasal or oral ulcers
+449,kidney issues
+450,rashes
+451,Headaches
+452,scalp tenderness
+453,jaw pain
+454,vision problems
+455,unintentional weight loss
+456,unintended weight loss
+457,weak pulse
+458,Foamy urine
+459,"swelling in legs, feet, or ankles"
+460,joint pain and swelling
+461,numbness or weakness in a hand or foot
+462,Mouth sores
+463,genital sores
+464,inflammation of parts of the eye
+465,skin problems
+466,blood vessel inflammation
+467,digestive issues
+468,sudden nausea and vomiting
+469,clay-colored bowel movements
+470,low-grade fever
+471,enlarged liver
+472,abdominal discomfort
+473,spider angiomas
+474,enlarged spleen
+475,itchy skin
+476,dry eyes and mouth
+477,pain in the upper right abdomen
+478,swelling of the feet and ankles
+479,fluid buildup in the abdomen
+480,yellowing of the skin and eyes (jaundice)
+481,paleness
+482,unusual paleness (pallor)
+483,easy or unusual bruising or bleeding
+484,rapid or irregular heart rate
+485,unexplained or easy bruising
+486,nosebleeds and bleeding gums
+487,prolonged bleeding from cuts
+488,frequent falls
+489,difficulty rising from a lying or sitting position
+490,trouble running and jumping
+491,large calf muscles
+492,delayed motor development
+493,difficulty walking
+494,muscle cramps
+495,enlarged calves
+496,"Weakness in legs, ankles, and feet"
+497,loss of muscle bulk in legs and feet
+498,high foot arches
+499,curled toes
+500,difficulty lifting the foot
+501,decreased ability to run
+502,foot drop
+503,frequent tripping or falling
+504,poor coordination
+505,heart disease
+506,vision impairment
+507,lack of motor development
+508,loss of motor skills
+509,poor muscle tone
+510,tingling in extremities
+511,unsteady walking
+512,difficulty with facial movements
+513,difficulty speaking
+514,severe pain
+515,gradual onset of numbness
+516,tingling
+517,sharp or jabbing pain
+518,sensitivity to touch
+519,lack of coordination
+520,severe fatigue
+521,swelling in ankles and legs
+522,numbness or tingling
+523,diarrhea or constipation
+524,skin changes
+525,bloody diarrhea
+526,low urine output
+527,unexplained bruises
+528,slow growth
+529,abdominal swelling
+530,facial bone deformities
+531,anemia
+532,episodes of pain
+533,delayed growth
+534,enlarged spleen and liver
+535,bruising and bleeding
+536,bone pain and fractures
+537,difficulty feeding
+538,poor weight gain
+539,distinct facial features
+540,enlarged head
+541,frequent upper respiratory infections
+542,sleep apnea
+543,joint stiffness
+544,developmental delay
+545,coarse facial features
+546,corneal clouding
+547,increased startle response
+548,seizures
+549,movement issues
+550,poor head control
+551,abnormal muscle tone
+552,large head
+553,blindness
+554,self-mutilation behaviors
+555,muscle rigidity
+556,involuntary movements
+557,gout
+558,feeding difficulties
+559,episodes of fever without infection
+560,stiff posture
+561,slowed development
+562,muscle wasting and weakness
+563,vision loss
+564,developmental delays
+565,behavior changes
+566,progressive loss of neurological functions
+567,hyperactivity
+568,visual disturbances
+569,adrenal gland dysfunction
+570,stiffness in arms and legs
+571,intellectual disability
+572,slowed growth
+573,loss of normal movement and coordination
+574,loss of communication abilities
+575,abnormal hand movements
+576,breathing problems
+577,severe speech impairment
+578,movement and balance issues
+579,happy demeanor
+580,frequent laughter
+581,insatiable appetite
+582,obesity
+583,behavior problems
+584,unusual facial characteristics
+585,short stature
+586,heart defects
+587,bleeding problems
+588,skeletal malformations
+589,learning difficulties
+590,cardiovascular problems
+591,outgoing personality
+592,involuntary jerking movements
+593,downward-slanting eyes
+594,notch in the lower eyelids
+595,underdeveloped or absent cheekbones
+596,small jaw and chin
+597,malformed ears
+598,high-pitched cat-like cry
+599,microcephaly
+600,low birth weight
+601,weak muscle tone
+602,distinctive facial features
+603,difficulty moving limbs
+604,enlarged liver and spleen
+605,lung disease
+606,intellectual decline
+607,progressive loss of motor skills
+608,sweet-smelling urine
+609,poor feeding
+610,lack of energy
+611,feeding problems
+612,liver dysfunction
+613,growth failure
+614,small head size
+615,vision and hearing loss
+616,premature aging
+617,aged-looking skin
+618,loss of body fat and hair
+619,stiffness of joints
+620,hip dislocation
+621,cardiovascular disease
+622,sun-sensitive skin changes
+623,increased risk of cancer
+624,chronic lung problems
+625,cataracts
+626,osteoporosis
+627,increased cancer risk
+628,bone marrow failure
+629,physical abnormalities
+630,skin discoloration
+631,arthritis
+632,darkened earwax
+633,dark spots on the sclera of the eyes
+634,heart valve issues
+635,severe abdominal pain
+636,reddish-brown urine
+637,mental disturbances
+638,"pain, particularly in the hands and feet"
+639,skin abnormalities
+640,lung and kidney disease
+641,benign tumors in various organs
+642,tumors and cysts throughout the body
+643,hypertension
+644,café-au-lait spots
+645,neurofibromas
+646,bone deformities
+647,ringing in the ears (tinnitus)
+648,balance issues
+649,skin flaps or bumps
+650,numbness
+651,tumors in the nervous system
+652,port-wine stain birthmark
+653,glaucoma
+654,paralysis or weakness on one side
+655,bleeding
+656,recurrent infections
+657,eczema
+658,reduced platelet count
+659,extreme sensitivity to UV rays
+660,severe sunburns
+661,skin blisters
+662,freckles
+663,skin cancer
+664,"dry, scaly skin"
+665,speech difficulties
+666,spasticity
+667,sparse hair
+668,skeletal abnormalities
+669,dental issues
+670,pale or yellowish skin
+671,bone pain
+672,fractures
+673,calcification in tissues
+674,abnormal heart rhythms
+675,personality changes
+676,neurological impairment
+677,hypotension
+678,tingling in lips and fingers
+679,increased thirst and urination
+680,heart palpitations
+681,tingling sensations
+682,slow or irregular heartbeats
+683,fluid loss
+684,"lack of pigment in the skin, hair, and eyes"
+685,increased risk of skin cancer
+686,difficulty distinguishing between colors
+687,inability to see shades or tones
+688,frequent nosebleeds
+689,blood in urine or stool
+690,memory loss
+691,difficulty with language
+692,behavioral changes
+693,poor balance
+694,urinary incontinence
+695,blood pressure issues
+696,difficulty moving the eyes
+697,speech and swallowing difficulties
+698,rapid mental deterioration
+699,"dark, thickened patches of skin, often in body folds"
+700,enlarged hands and feet
+701,facial changes
+702,thickened skin
+703,loss of consciousness
+704,high fevers
+705,salmon-colored bumpy rash
+706,"inability to recognize objects, people, sounds, shapes, or smells"
+707,sudden hair loss in round patches on the scalp
+708,sudden intense back or abdominal pain
+709,pain around the navel that shifts to the lower right abdomen
+710,difficulty understanding language
+711,difficulty reading or writing
+712,rapid or irregular heartbeat
+713,fainting
+714,leg pain
+715,difficulty with social interactions
+716,restricted interests
+717,desire for sameness
+718,delayed motor skills
+719,cyanosis
+720,unconsciousness
+721,frequent heartburn
+722,chronic cough
+723,pale stools
+724,sudden cardiac arrest
+725,flushing of the skin
+726,"numbness, tingling, and pain in the hand and arm"
+727,weakness in the hand
+728,neck pain and stiffness
+729,pain in the shoulders and arms
+730,tingling in the arms and fingers
+731,"sudden, severe joint pain"
+732,redness
+733,warmth in affected joints
+734,chest tightness
+735,easily bleeding or bruising
+736,"swelling in the legs, feet, or ankles"
+737,"severe, burning, and piercing pain around one eye"
+738,swelling around the affected eye
+739,redness in the eye
+740,ambiguous genitalia
+741,early signs of puberty
+742,rapid growth in childhood but shorter than average final height
+743,severe acne
+744,"sharp, aching, or pressure-like chest pain"
+745,pain when taking a deep breath or coughing
+746,tenderness when pressing on the chest
+747,memory problems
+748,persistent cough with thick mucus
+749,swelling in one leg
+750,pain or tenderness in one leg
+751,warm skin on the affected leg
+752,red or discolored skin on the leg
+753,visible veins
+754,"pain in the lower back, buttocks, or thighs"
+755,"pain that worsens with sitting, lifting, bending, or twisting"
+756,pain that gets better with walking and moving
+757,extreme thirst
+758,producing large amounts of diluted urine
+759,nausea and vomiting
+760,weakness or fatigue
+761,fruity-scented breath
+762,"persistent pain, often in the lower left side of the abdomen"
+763,unstable blood pressure
+764,abnormal heart rates
+765,malnutrition
+766,hypermobile joints
+767,sudden jerking movements
+768,vomiting blood
+769,"black, tarry, or bloody stools"
+770,widespread musculoskeletal pain
+771,cognitive difficulties
+772,irritable bowel syndrome
+773,pain in the shoulder
+774,decreased range of motion
+775,feeling full after eating a small amount
+776,severe eye pain
+777,sudden onset of visual disturbance
+778,halos around lights
+779,eye redness
+780,anxiety and irritability
+781,weakness and tingling in extremities
+782,"swollen, puffy gums"
+783,"bright red, dusky red or purplish gums"
+784,tender gums
+785,bleeding gums
+786,bad breath
+787,pus between your teeth and gums
+788,loose teeth
+789,painful chewing
+790,"swelling of hands, feet, face, airway, and intestinal tract"
+791,blackheads
+792,painful lumps
+793,tunnels connecting lumps
+794,failure to pass stool within the first few days of life
+795,swollen belly
+796,constipation or gas
+797,severe nausea and vomiting
+798,electrolyte imbalances
+799,chronic dry cough
+800,unexplained weight loss
+801,aching muscles and joints
+802,clubbing of fingers or toes
+803,chronic pelvic pain
+804,swollen hands and feet
+805,redness in eyes
+806,inflammation of blood vessels
+807,low testosterone
+808,vertigo
+809,tinnitus
+810,feeling of fullness in the ear
+811,blood in stool
